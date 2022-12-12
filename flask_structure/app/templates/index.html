@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>VISTA PRINCIPAL DE LOS ALUMNOS Y SUS SALONES</h1>
+
+    <ul>
+        <li><a href="{{url_for('alumnos')}}">Alumnos</a></li>
+        <li><a href="{{url_for('salones')}}">Salones</a></li>
+    </ul>
+{% endblock %}

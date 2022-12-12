@@ -1,0 +1,15 @@
+<br>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Listado de Alumnos</h1>
+
+    <li><a href="{{url_for('crear_alumnos')}}">Crear Alumno</a></li>
+    <li><a href="{{url_for('index')}}">Regresar</a></li>
+    <br>
+    <ul>
+        {% for alumno in alumnos %}
+            <li>{{alumno.id}} -- {{alumno.nombre}} -- {{alumno.apellido}} -- {{alumno.email}} -- {{alumno.id_aula}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

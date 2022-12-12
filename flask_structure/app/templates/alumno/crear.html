@@ -1,0 +1,29 @@
+<br>
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="" method="post" novalidate>
+        {{data.hidden_tag()}}
+        {{data.nombre.label}}
+        {{data.nombre}}
+        
+        <br><br>
+        
+        {{data.apellido.label}}
+        {{data.apellido}}
+        
+        <br><br>
+        
+        {{data.email.label}}
+        {{data.email}}
+        
+        <br><br>
+
+        {{data.id_aula.label}}
+        {{data.id_aula}}
+        
+        <br><br>
+
+        {{data.boton}}
+    </form>
+{% endblock %}

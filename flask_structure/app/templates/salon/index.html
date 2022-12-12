@@ -1,0 +1,20 @@
+<br>
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Listado de aulas</h1>
+
+    <li><a href="{{url_for('crear_salones')}}">Crear salón</a></li>
+    <li><a href="{{url_for('index')}}">Regresar</a></li>
+    <br>
+    <ul>
+        {% for salon in salones %}
+            <li>
+                {{salon.id}} -- {{salon.nombre}} -- {{salon.hora_entrada}}
+                <i class="fas fa-trash">
+                    <a href="{{url_for('eliminar', salon.id)}}"></a>
+                </i>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
