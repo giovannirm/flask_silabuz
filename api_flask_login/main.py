@@ -1,6 +1,6 @@
 from app import create_app
 from db import db
-from flask import Flask, render_template, redirect, flash, url_for
+from flask import Flask, render_template, redirect, flash, url_for, Blueprint
 from flask_login import LoginManager, current_user, login_user, logout_user, login_required
 from forms import LoginForm, EditProfileForm, PostForm
 from app.models.user import User, AnonymousUser
